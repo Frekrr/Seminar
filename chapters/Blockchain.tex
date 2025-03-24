@@ -5,5 +5,15 @@ hat. Dem werden im Nachgang die einhergehenden Nachteile und Risiken gegenüberg
 
 \subsection{Aufbau einer Blockchain}
 \cite[p.~2]{pirafelnerblockchaintechnologie}
+Um die Einsatzgebiete für eine Blockchain im Finanzsektor besser zu verstehen,
+wird im Folgenden der Aufbau und die Komponenten grob dargestellt.
+Im Block 1 wird zuerst jeweils ein Hash H1 und H2 für die Datenpunkte Transaktion 1 
+und Transaktion 2 gebildet. Aus diesen Hashes wird dann ein gemeinsamer Hash H12 gebildet, 
+der den Block Header 1 darstellt.
+Analog zum Block Header 1 wird Block Header 2 erstellt. Zusätzlich enthält dieser eine
+Referenz auf den vorigen Block Header 1 und ist somit der Kopf der Kette. Der Block Header 2
+kann weiterführend im Block Haeder 3 eines dritten Blocks referenziert werden. 
+\ref{fig:BC_Structure}
+\cite[p.~17f]{fill2020aufbau}
 
 \subsection{}
