@@ -1,11 +1,52 @@
+\documentclass[
+    paper = A4,		% Blattgröße
+    11pt, 			% Schriftgröße	
+    DIV=12, 		% Satzspiegel
+    parskip=half,	% Absatzabstand
+]{article}
+
+\usepackage[utf8]{inputenc}	% Dateicodierung
+\usepackage[T1]{fontenc}	% Schriftcodierung
+\usepackage[ngerman]{babel}	% Spracheinstellung
+
+% Schriften
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{lmodern}		% Vektorschrift
+\usepackage{microtype}		% iwas mit Trennstrichen für Blocksastz
+
+
+% Bilder
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+
+% Referenzbearbeitung
+%\usepackage{csquotes}
+\usepackage[
+	backend = biber,
+	style = numeric-comp
+	]{biblatex}
+\addbibresource{literature.bib}
+
+%\bibliographystyle{plain}
+%\bibliography{literature}
+
+% Referenzierungen
+\usepackage[
+	%hidelinks,
+	colorlinks = true,
+	linkcolor = blue,
+	citecolor = green
+	]{hyperref}
+
+
+    \usepackage{blindtext}
+
+
 \title{Blockchain- und IoT-Integration für die Revolution im Finanzsektor}
 \author{Helena Stevanovic}
 \date{08. April 2025}
 
-\bibliographystyle{plain}
-\bibliography{literature}
 
-\documentclass{article}
 
 \begin{document}
 \maketitle
@@ -17,4 +58,6 @@
 
 Hallo \cite[p.~270]{chowdhary2025smart}
 
+
+\printbibliography
 \end{document}
