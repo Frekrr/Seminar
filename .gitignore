@@ -8,3 +8,5 @@
 *.out
 *.run.xml
 *.lof
+*.bbl
+*.blg
