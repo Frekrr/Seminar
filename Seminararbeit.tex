@@ -33,23 +33,19 @@
 \usepackage{csquotes}
 \usepackage[
 	backend = biber,
-	style = numeric-comp
+	style = ieee
 	]{biblatex}
 \addbibresource{literature.bib}
 
-%\bibliographystyle{plain}
-\bibliography{literature.bib}
-
 % Referenzierungen
 \usepackage[
-	%hidelinks,
 	colorlinks = true,
 	linkcolor = blue,
-	citecolor = green
+	citecolor = green,
+	hidelinks,  % remove colouring
 	]{hyperref}
 
-
-    \usepackage{blindtext}
+\usepackage{blindtext}
 
 
 \title{Blockchain- und IoT-Integration für die Revolution im Finanzsektor}
