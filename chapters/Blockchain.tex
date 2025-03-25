@@ -4,7 +4,14 @@ eingegangen, durch die diese Technologie Einzug in den Finanzsektor gewonnen
 hat. Dem werden im Nachgang die einhergehenden Nachteile und Risiken gegenübergestellt. 
 
 \subsection{Aufbau einer Blockchain}
-\cite[p.~2]{pirafelnerblockchaintechnologie}
+Ein elementarer Grundbaustein einer Blockchain ist die Bildung eines Hashes.
+"Eine Hash-Funktion bildet eine beliebig große Menge an Eingabedaten [...] auf eine Zahl von 
+fixer Größe ab, den sogenannten Hashwert." \cite[p.~6]{fill2020aufbau}
+Die Hashfunktion erfüllt darüber hinaus drei wichtige Prinzipien.
+Das Diffusionsprinzip beschreibt die große Änderung des Hashwertes bei einem leicht
+abgeänderten Eingabewert.
+\cite[p.~6ff]{fill2020aufbau}
+
 Um die Einsatzgebiete für eine Blockchain im Finanzsektor besser zu verstehen,
 wird im Folgenden der Aufbau und die Komponenten grob dargestellt.
 Im Block 1 wird zuerst jeweils ein Hash H1 und H2 für die Datenpunkte Transaktion 1 
@@ -14,6 +21,7 @@ Analog zum Block Header 1 wird Block Header 2 erstellt. Zusätzlich enthält die
 Referenz auf den vorigen Block Header 1 und ist somit der Kopf der Kette. Der Block Header 2
 kann weiterführend im Block Haeder 3 eines dritten Blocks referenziert werden. 
 \ref{fig:BC_Aufbau}
+\cite[p.~17f]{fill2020aufbau}
 
 \begin{figure}[h] %mit b und p statt h probieren
     \includegraphics[width=\columnwidth]{BC_Aufbau.png}
@@ -21,6 +29,5 @@ kann weiterführend im Block Haeder 3 eines dritten Blocks referenziert werden.
     \label{fig:BC_Aufbau}
 \end{figure}
 
-\cite[p.~17f]{fill2020aufbau}
 
 \subsection{}
