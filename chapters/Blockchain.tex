@@ -7,10 +7,13 @@ hat. Dem werden im Nachgang die einhergehenden Nachteile und Risiken gegenüberg
 Ein elementarer Grundbaustein einer Blockchain ist die Bildung eines Hashes.
 \glqq Eine Hash-Funktion bildet eine beliebig große Menge an Eingabedaten [...] auf eine Zahl von 
 fixer Größe ab, den sogenannten Hashwert\grqq{} \cite[p.~6]{fill2020blockchain}.
-Die Hashfunktion erfüllt darüber hinaus drei wichtige Prinzipien.
-Das Diffusionsprinzip beschreibt eine große Änderung des Hashwertes bei einem leicht
+Die Hash-Funktion erfüllt darüber hinaus drei wichtige Prinzipien.
+Das Diffusionsprinzip beschreibt eine deutliche Änderung des Hashwertes bei einem leicht
 abgeänderten Eingabewert. Dadurch können unterschiedliche Eingaben sofort erkannt werden.
-\cite[p.~6ff]{fill2020blockchain}
+Das Konfusionsprinzip beschreibt die Eigenschaft, dass vom Hashwert nicht auf den Eingabewert
+geschlossen werden kann. Beim Vergleich zweier Hashwerte von Eingaben mit einer minimalen
+Änderung kann nichtmal die Position der Abweichung geschlossen werden.
+\cite[p.~6ff]{fill2020blockchain} 
 
 Um die Einsatzgebiete für eine Blockchain im Finanzsektor besser zu verstehen,
 wird im Folgenden der Aufbau und die Komponenten grob dargestellt.
@@ -25,7 +28,8 @@ kann weiterführend im Block Haeder 3 eines dritten Blocks referenziert werden.
 
 \begin{figure}[h!]
     \includegraphics[width=\columnwidth]{BC_Aufbau.png}
-    \caption{Aufbau einer Blockchain}
+    \quelle{\cite[p.~19]{fill2020blockchain}}
+    \caption{Aufbau einer Blockchain \cite[p.~19]{fill2020blockchain}}
     \label{fig:BC_Aufbau}
 \end{figure}
 
