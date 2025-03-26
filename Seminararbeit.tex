@@ -33,7 +33,8 @@
 \usepackage{csquotes}
 \usepackage[
 	backend = biber,
-	style = ieee
+	style = ieee        % ISO 690
+    %style = authoryear-ibid %, maxcitenames=1, sorting=nyt  % Harvard 
 	]{biblatex}
 \addbibresource{literature.bib}
 
@@ -63,7 +64,6 @@
 
 \include{chapters/Einleitung}
 \include{chapters/Blockchain}
-\include{chapters/IoT_Cybersicherheit}
 
 \printbibliography
 \listoffigures
