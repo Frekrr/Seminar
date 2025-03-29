@@ -3,7 +3,9 @@ In diesem Kapitel wird auf die revolutionären Vorteile der Blockchain
 eingegangen, durch die diese Technologie Einzug in den Finanzsektor gewonnen 
 hat. Dem werden im Nachgang die einhergehenden Nachteile und Risiken gegenübergestellt. 
 
-\subsection{Aufbau einer Blockchain}
+\subsection{Aufbau und Funktionsweise einer Blockchain}
+Um die Einsatzgebiete für eine Blockchain im Finanzsektor besser zu verstehen,
+wird im Folgenden der Aufbau und die Komponenten grob dargestellt.
 Ein elementarer Grundbaustein einer Blockchain ist die Bildung eines Hashes.
 \glqq Eine Hash-Funktion bildet eine beliebig große Menge an Eingabedaten [...] auf eine Zahl von 
 fixer Größe ab, den sogenannten Hashwert\grqq{} \cite[p.~6]{fill2020blockchain}.
@@ -19,8 +21,6 @@ werden. // Die Hash-Funktion soll hierfür möglichst vermeiden zwei unterschied
 auf denselben Hashwert abzubilden.
 \cite[p.~6ff]{fill2020blockchain} 
 
-Um die Einsatzgebiete für eine Blockchain im Finanzsektor besser zu verstehen,
-wird im Folgenden der Aufbau und die Komponenten grob dargestellt.
 Im Block 1 wird zuerst jeweils ein Hash H1 und H2 für die Datenpunkte Transaktion 1 
 und Transaktion 2 gebildet. Aus diesen Hashes wird dann ein gemeinsamer Hash H12 gebildet, 
 der den Block Header 1 darstellt.
@@ -28,6 +28,8 @@ Analog zum Block Header 1 wird Block Header 2 erstellt. Zusätzlich enthält die
 Referenz auf den vorigen Block Header 1 und ist somit der Kopf der Kette. Der Block Header 2
 kann weiterführend im Block Haeder 3 eines dritten Blocks referenziert werden. 
 \ref{fig:BC_Aufbau}
+Durch diese Datenstruktur kann ein involvierter Rechnerknoten die einzelnen Blöcke rekursiv
+zurückverfolgen und Einblick in alle zuvor getätigten Transaktionen haben.
 \cite[p.~17f]{fill2020blockchain}
 
 \begin{figure}[h!]
@@ -36,6 +38,15 @@ kann weiterführend im Block Haeder 3 eines dritten Blocks referenziert werden.
     \caption{Aufbau einer Blockchain \cite[p.~19]{fill2020blockchain}}
     \label{fig:BC_Aufbau}
 \end{figure}
+
+Damit ist die Blockchain ein verteiltes Register mit Integritätsgarantie. Die Integrität 
+wird hierbei sichergestellt, indem eine Änderung an einem beliebigen Punkt in der
+Blockchain eine Anpassung in allen Blöcken nach sich zieht, die eine direkte oder
+indirekte Referenz auf diesen Block haben. Dank klarer und verschlüsselter Eigentumsansprüche
+werden Änderungen nur dann vorgenommen, wenn sie berechtigt sind.
+Als Schutzmechanismus werden Änderungen jedoch nur dann vorgenommen, wenn sie durch klare
+und verschlüsselte Eigentumsansprüche berechtigt sind.
+\cite[p.~22]{fill2020blockchain} 
 
 
 \subsection{Einsatzgebiete im Finanzsektor}
@@ -53,9 +64,10 @@ Die stärksten Kryptowährungen sind Bitcoin und Ethereum.
 Die Blockchain gewährleistet die Sicherheit und Nachvollziehbarkeit von Transaktionen.
 \cite[p.~168]{chowdhary2025smart}
 Das wird dadurch erreicht, indem die Transaktionen fest in der Blockchain codiert sind.
-
  \cite[p.~11f]{pirafelnerblockchaintechnologie}
- 
+ Zusätzlich wird ein Konsensalgorithmus
+ \cite[p.~32]{fill2020blockchain}
+
 % Verweis auf vorher verifizierte Blöcke & vollst. Kopie auf jedem teilnehmenden Gerät.
 Die Blockchain-Technologie ermöglicht einen Peer-to-Peer Austausch von digitalen
 Währungseinheiten. Dadurch werden Zwischeninstanzen, wie Banken und andere Zahlungsdienstleister,
