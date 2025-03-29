@@ -26,16 +26,17 @@ und Transaktion 2 gebildet. Aus diesen Hashes wird dann ein gemeinsamer Hash H12
 der den Block Header 1 darstellt.
 Analog zum Block Header 1 wird Block Header 2 erstellt. Zusätzlich enthält dieser eine
 Referenz auf den vorigen Block Header 1 und ist somit der Kopf der Kette. Der Block Header 2
-kann weiterführend im Block Haeder 3 eines dritten Blocks referenziert werden. 
-\ref{fig:BC_Aufbau}
+kann weiterführend im Block Haeder 3 eines dritten Blocks referenziert werden 
+(vgl. \autoref{fig:BC_Aufbau}). 
+
 Durch diese Datenstruktur kann ein involvierter Rechnerknoten die einzelnen Blöcke rekursiv
 zurückverfolgen und Einblick in alle zuvor getätigten Transaktionen haben.
 \cite[p.~17f]{fill2020blockchain}
 
-\begin{figure}[h!]
+\begin{figure}[!h]
     \includegraphics[width=\columnwidth]{BC_Aufbau.png}
     \quelle{\cite[p.~19]{fill2020blockchain}}
-    \caption{Aufbau einer Blockchain \cite[p.~19]{fill2020blockchain}}
+    \caption{Aufbau einer Blockchain}
     \label{fig:BC_Aufbau}
 \end{figure}
 
