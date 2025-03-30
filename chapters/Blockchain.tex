@@ -4,6 +4,7 @@ eingegangen, durch die diese Technologie Einzug in den Finanzsektor gewonnen
 hat. Dem werden im Nachgang die einhergehenden Nachteile und Risiken gegenübergestellt. 
 
 \subsection{Aufbau und Funktionsweise einer Blockchain}
+\subsubsection{Hash-Funktion}
 Um die Einsatzgebiete für eine Blockchain im Finanzsektor besser zu verstehen,
 wird im Folgenden der Aufbau und die Komponenten grob dargestellt.
 Ein elementarer Grundbaustein einer Blockchain ist die Bildung eines Hashes.
@@ -21,35 +22,67 @@ werden. // Die Hash-Funktion soll hierfür möglichst vermeiden zwei unterschied
 auf denselben Hashwert abzubilden.
 \cite[p.~6ff]{fill2020blockchain} 
 
+\subsubsection{Aufbau einer Blockchain}
 Im Block 1 wird zuerst jeweils ein Hash H1 und H2 für die Datenpunkte Transaktion 1 
 und Transaktion 2 gebildet. Aus diesen Hashes wird dann ein gemeinsamer Hash H12 gebildet, 
 der den Block Header 1 darstellt.
 Analog zum Block Header 1 wird Block Header 2 erstellt. Zusätzlich enthält dieser eine
 Referenz auf den vorigen Block Header 1 und ist somit der Kopf der Kette. Der Block Header 2
 kann weiterführend im Block Haeder 3 eines dritten Blocks referenziert werden 
-(vgl. \autoref{fig:BC_Aufbau}). 
+(siehe \autoref{fig:BC_Aufbau}). 
 Durch diese Datenstruktur kann ein involvierter Rechnerknoten die einzelnen Blöcke rekursiv
 zurückverfolgen und Einblick in alle zuvor getätigten Transaktionen haben.
 \cite[p.~17f]{fill2020blockchain}
 
 \begin{figure}[!h]
-    \includegraphics[width=\columnwidth]{BC_Aufbau.png}
-    \quelle{\cite[p.~19]{fill2020blockchain}}
-    \caption{Aufbau einer Blockchain}
-    \label{fig:BC_Aufbau}
+    \begin{minipage}{.66\textwidth}
+        \includegraphics[width= 0.66\columnwidth]{BC_Aufbau.png}
+        \quelle{\cite[p.~19]{fill2020blockchain}}
+        \captionof{figure}{Aufbau einer Blockchain}
+        \label{fig:BC_Aufbau}
+    \end{minipage}
+    \begin{minipage}{.33\textwidth}
+        \includegraphics[width= 0.33\columnwidth]{BC_Erweiterung.png}
+        \quelle{\cite[p.~24]{fill2020blockchain}}
+        \caption{erweiterter Block Header für Proof-of-Work}
+        \label{fig:BC_Erweiterung}
+    \end{minipage}
 \end{figure}
+
 
 Damit ist die Blockchain ein verteiltes Register mit Integritätsgarantie. Die Integrität 
 wird hierbei sichergestellt, indem eine Änderung an einem beliebigen Punkt in der
 Blockchain eine Anpassung in allen Blöcken nach sich zieht, die eine direkte oder
 indirekte Referenz auf diesen Block haben. Dank klarer und verschlüsselter Eigentumsansprüche
 werden Änderungen nur dann vorgenommen, wenn sie berechtigt sind.
-Als Schutzmechanismus werden Änderungen jedoch nur dann vorgenommen, wenn sie durch klare
-und verschlüsselte Eigentumsansprüche berechtigt sind.
+% Oder:
+% Als Schutzmechanismus werden Änderungen jedoch nur dann vorgenommen, wenn sie durch 
+% klare und verschlüsselte Eigentumsansprüche berechtigt sind.
 \cite[p.~22]{fill2020blockchain} 
 
-% Maybe Erweiterung der Blockchain mittels eines Konsensalgorithmus
-% \cite[p.~23f]{fill2020blockchain}
+\subsubsection{Erweiterung der Blockchain mit Proof-of-Work}
+% Erweiterung der Blockchain mittels eines Konsensalgorithmus
+Neue Blöcke werden mittels eines Konsensalgorithmus hinzugefügt.
+Hierfür wird zuerst ein Rechnerknoten ausgewählt, der den neuen Block berechnet. 
+Da die Blockchain dezentral strukturiert ist, wird dies durch ein Zufallsprinzip entschieden.
+% dezentral --> Verzicht auf Intermediäre
+Hierfür wird ein kryptographisches Puzzle an alle Rechnerknoten gestellt, das ausschließlich
+durch den erbrachten Rechenaufwand lösbar ist. Daher nennt sich das hier erläuterte Prinzip
+"Proof-of-Work". Zuerst wird der Block Header um die für das Puzzle nötigen Elemente 
+erweitert: Eine Protokollversion zum Erstellen des neuen Blocks, einen Zeitstempel mit
+dem Zeitpunkt des Erstellens, einem Target als Angabe des Schwierigkeitsgrades des Puzzles
+und einer Nonce (Number used once) als Beweis der Lösung des Puzzles (siehe \autoref{fig:BC_Erweiterung}).
+
+Aus diesen erweiterten Elemente wird zusammen mit der Referenz BH1 auf den vorangehenden 
+Block Header und der Wurzel H34 des Hash-Baumes auf die Transaktionsdaten ein gemeinsamer 
+Hashwert berechnet. 
+Das Ziel des Puzzles ist einen Hashwert zu generieren, der kleiner als das Target ist. Die 
+Miner haben dafür einzig die Nonce als veränderbaren Wert zur Verfügung. Wurde das Rätsel
+gelöst, wird der neue Block zusammen mit der Nonce an alle anderen Rechnerknoten zur Prüfung
+geschickt.
+Zuletzt wird dieser neue Block in die Blockchain aufgenommen , sofern er validiert und 
+fehlerfrei ist; ansonsten wird dieser verworfen.
+\cite[p.~22ff]{fill2020blockchain}
 
 
 \subsection{Einsatzgebiete im Finanzsektor}
@@ -71,11 +104,20 @@ So ermöglicht sie einen Peer-to-Peer Austausch von digitalen
 Währungseinheiten ohne Intermediäre, wie Banken und andere Zahlungsdienstleister,
 die die Vertrauenswürdigkeit der Transaktionsakteure beglaubigen sollen.
 \cite[p.~32]{fill2020blockchain}
-Das wird dadurch erreicht, indem die Transaktionen fest in der Blockchain codiert sind.
+Die Nachvollziehbarkeit wird dadurch erreicht, indem die Transaktionen fest in der 
+Blockchain codiert sind.
 \cite[p.~11f]{pirafelnerblockchaintechnologie}
-Neue Transaktionen werden mittels eines Konsensalgorithmus zur Blockchain hinzugefügt.
 
-\cite[p.~32]{fill2020blockchain}
+% Hinzufügen neuer Transaktionen
+Neue Transaktionen werden mittels eines Konsensalgorithmus hinzugefügt.
+Hierfür wird zuerst ein Rechnerknoten ausgewählt, der den neuen Block berechnet. 
+Da die Blockchain dezentral strukturiert ist, wird dies durch ein Zufallsprinzip entschieden.
+% dezentral --> Verzicht auf Intermediäre
+Hierfür wird ein kryptographisches Puzzle an alle 
+% mehr Beschreibungen...
+Zuletzt wird dieser neue Block von allen anderen Rechnerknoten validiert und in die 
+Blockchain aufgenommen, sofern er fehlerfrei ist; ansonsten wird dieser verworfen.
+\cite[p.~22ff]{fill2020blockchain}
 
 
 
