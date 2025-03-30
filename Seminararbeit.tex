@@ -28,6 +28,7 @@
 % Bilder
 \usepackage{graphicx}
 \graphicspath{{figures/}}
+\usepackage{caption}
 
 % Referenzbearbeitung
 \usepackage{csquotes}
@@ -41,12 +42,13 @@
 % Referenzbearbeitung Bildquellen
 \newcommand*{\quelle}[1]{\par\raggedleft\footnotesize Quelle:~#1}
 
-% Referenzierungen
+% Referenzierungen 
+% immer als letztes einbinden
 \usepackage[
 	colorlinks = true,
 	linkcolor = blue,
-	citecolor = green,
-	hidelinks,  % remove colouring
+	citecolor = blue,
+	%hidelinks,  % remove colouring
 	]{hyperref}
 
 \usepackage{blindtext}
@@ -59,9 +61,11 @@
 
 
 \begin{document}
+\pagestyle{empty}
 \maketitle
 
 \newpage
+\pagestyle{plain}
 \tableofcontents
 
 \include{chapters/Einleitung}
