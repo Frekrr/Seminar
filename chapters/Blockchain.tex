@@ -17,8 +17,8 @@ Das Konfusionsprinzip beschreibt die Eigenschaft, dass vom Hashwert nicht auf de
 geschlossen werden kann. Beim Vergleich zweier Hashwerte von Eingaben mit einer minimalen
 Änderung kann nichtmal auf die Position der Abweichung geschlossen werden.
 Zuletzt ist die Kollisionsresistenz insbesondere im Bereich der Kryptographie relevant.
-Eine Kollision tritt dann auf, wenn zwei unterschiedliche Eingaben auf denselben Hash abgebildet
-werden. // Die Hash-Funktion soll hierfür möglichst vermeiden zwei unterschiedliche Eingabewerte
+% Eine Kollision tritt dann auf, wenn zwei unterschiedliche Eingaben auf denselben Hash abgebildet werden. 
+Die Hash-Funktion soll hierfür möglichst vermeiden zwei unterschiedliche Eingabewerte
 auf denselben Hashwert abzubilden.
 \cite[p.~6ff]{fill2020blockchain} 
 
@@ -61,6 +61,7 @@ werden Änderungen nur dann vorgenommen, wenn sie berechtigt sind.
 \cite[p.~22]{fill2020blockchain} 
 
 \subsubsection{Erweiterung der Blockchain mit Proof-of-Work}
+\label{sec:Erweiterung}
 % Erweiterung der Blockchain mittels eines Konsensalgorithmus
 Neue Blöcke werden mittels eines Konsensalgorithmus hinzugefügt.
 Hierfür wird zuerst ein Rechnerknoten ausgewählt, der den neuen Block berechnet. 
@@ -105,19 +106,22 @@ Währungseinheiten ohne Intermediäre, wie Banken und andere Zahlungsdienstleist
 die die Vertrauenswürdigkeit der Transaktionsakteure beglaubigen sollen.
 \cite[p.~32]{fill2020blockchain}
 Die Nachvollziehbarkeit wird dadurch erreicht, indem die Transaktionen fest in der 
-Blockchain codiert sind.
-\cite[p.~11f]{pirafelnerblockchaintechnologie}
+Blockchain codiert sind (siehe \autoref{fig:BC_Aufbau}).
+%\cite[p.~11]{pirafelnerblockchaintechnologie}
 
-% Hinzufügen neuer Transaktionen
-Neue Transaktionen werden mittels eines Konsensalgorithmus hinzugefügt.
-Hierfür wird zuerst ein Rechnerknoten ausgewählt, der den neuen Block berechnet. 
-Da die Blockchain dezentral strukturiert ist, wird dies durch ein Zufallsprinzip entschieden.
+% Sicherheit
+Ein Konsensalgorithmus gewährleistet die Sicherheit und Integrität der Daten.
+Am Beispiel des Bitcoin wird das Konzept \glqq Proof-of-Work\grqq{} analog zum Abschnitt 
+\ref{sec:Erweiterung} angewendet. Demnach werden Änderungen von bereits getätigten
+Transaktionen und neu durchgeführte Transaktionen ausschließlich in die Blockchain
+aufgenommen, wenn diese von anderen Rechnerknoten validiert wurden.
 % dezentral --> Verzicht auf Intermediäre
-Hierfür wird ein kryptographisches Puzzle an alle 
-% mehr Beschreibungen...
-Zuletzt wird dieser neue Block von allen anderen Rechnerknoten validiert und in die 
-Blockchain aufgenommen, sofern er fehlerfrei ist; ansonsten wird dieser verworfen.
-\cite[p.~22ff]{fill2020blockchain}
+Zusätzlich ermöglicht die dezentrale Strukturierung der Blockchain den Verzicht auf 
+Intermediäre, wodurch Transaktionen in einem Peer-to-Peer Netzwerk durchgeführt
+werden können.
+\cite[p.~23]{fill2020blockchain}
+Dadurch sind die Kosten von Transaktionen länderunabhängig. \cite[p.~12]{pirafelnerblockchaintechnologie}
+
 
 
 
