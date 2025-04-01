@@ -4,9 +4,11 @@ eingegangen, durch die diese Technologie Einzug in den Finanzsektor gewonnen
 hat. Dem werden im Nachgang die einhergehenden Nachteile und Risiken gegenübergestellt. 
 
 \subsection{Aufbau und Funktionsweise einer Blockchain}
+Um die Verwendung von Blockchains im Finanzsektor besser zu verstehen,
+wird im Folgenden auf den Aufbau und die Komponenten näher eingegangen.
+
+
 \subsubsection{Hash-Funktion}
-Um die Einsatzgebiete für eine Blockchain im Finanzsektor besser zu verstehen,
-wird im Folgenden der Aufbau und die Komponenten grob dargestellt.
 Ein elementarer Grundbaustein einer Blockchain ist die Bildung eines Hashes.
 \glqq Eine Hash-Funktion bildet eine beliebig große Menge an Eingabedaten [...] auf eine Zahl von 
 fixer Größe ab, den sogenannten Hashwert\grqq{} \cite[p.~6]{fill2020blockchain}.
@@ -24,14 +26,15 @@ auf denselben Hashwert abzubilden.
 
 \subsubsection{Aufbau einer Blockchain}
 Im Block 1 wird zuerst jeweils ein Hash H1 und H2 für die Datenpunkte Transaktion 1 
-und Transaktion 2 gebildet. Aus diesen Hashes wird dann ein gemeinsamer Hash H12 gebildet, 
+und Transaktion 2 gebildet (siehe \autoref{fig:BC_Aufbau}). Aus diesen Hashes wird dann ein gemeinsamer Hash H12 gebildet, 
 der den Block Header 1 darstellt.
 Analog zum Block Header 1 wird Block Header 2 erstellt. Zusätzlich enthält dieser eine
 Referenz auf den vorigen Block Header 1 und ist somit der Kopf der Kette. Der Block Header 2
-kann weiterführend im Block Haeder 3 eines dritten Blocks referenziert werden 
-(siehe \autoref{fig:BC_Aufbau}). 
+kann weiterführend im Block Haeder 3 eines dritten Blocks referenziert werden. 
 Durch diese Datenstruktur kann ein involvierter Rechnerknoten die einzelnen Blöcke rekursiv
-zurückverfolgen und Einblick in alle zuvor getätigten Transaktionen haben.
+zurückverfolgen und Einblick in alle zuvor getätigten Transaktionen haben. Darüber
+hinaus befindet sich auf jedem Rechnerknoten eine lokal abgespeicherte Kopie der 
+Blockchain.
 \cite[p.~17f]{fill2020blockchain}
 
 \begin{figure}[!h]
@@ -50,11 +53,13 @@ zurückverfolgen und Einblick in alle zuvor getätigten Transaktionen haben.
 \end{figure}
 
 
-Damit ist die Blockchain ein verteiltes Register mit Integritätsgarantie. Die Integrität 
+Die Blockchain ist  ein verteiltes Register mit Integritätsgarantie. Die Integrität 
 wird hierbei sichergestellt, indem eine Änderung an einem beliebigen Punkt in der
 Blockchain eine Anpassung in allen Blöcken nach sich zieht, die eine direkte oder
-indirekte Referenz auf diesen Block haben. Dank klarer und verschlüsselter Eigentumsansprüche
-werden Änderungen nur dann vorgenommen, wenn sie berechtigt sind.
+indirekte Referenz auf diesen Block haben; also im betroffenen Block selbst und den
+nachfolgenden. Änderungen und Erweiterungen der Blockchain werden dank klarer 
+und verschlüsselter Eigentumsansprüche, sowie einem Konsensalgorithmus (siehe \ref{sec:Erweiterung}), 
+werden Änderungen nur dann vorgenommen, wenn sie berechtigt und richtig sind.
 % Oder:
 % Als Schutzmechanismus werden Änderungen jedoch nur dann vorgenommen, wenn sie durch 
 % klare und verschlüsselte Eigentumsansprüche berechtigt sind.
