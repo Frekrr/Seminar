@@ -69,24 +69,30 @@ werden Änderungen nur dann vorgenommen, wenn sie berechtigt und richtig sind.
 \label{sec:Erweiterung}
 % Erweiterung der Blockchain mittels eines Konsensalgorithmus
 Neue Blöcke werden mittels eines Konsensalgorithmus hinzugefügt.
-Hierfür wird zuerst ein Rechnerknoten ausgewählt, der den neuen Block berechnet. 
-Da die Blockchain dezentral strukturiert ist, wird dies durch ein Zufallsprinzip entschieden.
+Hierfür muss zuerst ein Rechnerknoten, am Beispiel Bitcoin auch \glqq Miner\grqq{} genannt, ausgewählt werden, der den neuen Block erstellt. 
+Um die Blockchain dezentral agieren zu lassen, wird die Auswahl per Zufallsprinzip getroffen.
 % dezentral --> Verzicht auf Intermediäre
+Für die Realisierung der Zufälligkeit gibt es mehrere Ansätze; hier wird jedoch nur auf das
+Prinzip \glqq Proof-of-Work\grqq{} eingegangen, welches auch im Bitcoin angewendet wird.
 Hierfür wird ein kryptographisches Puzzle an alle Rechnerknoten gestellt, das ausschließlich
-durch den erbrachten Rechenaufwand lösbar ist. Daher nennt sich das hier erläuterte Prinzip
-"Proof-of-Work". Zuerst wird der Block Header um die für das Puzzle nötigen Elemente 
-erweitert: Eine Protokollversion zum Erstellen des neuen Blocks, einen Zeitstempel mit
+durch den erbrachten Rechenaufwand lösbar ist. Daher der Name "Proof-of-Work". 
+
+% Ablauf
+Zuerst wird der Block Header um die für das Puzzle nötigen Elemente 
+erweitert: Eine Protokollversion für die Erstellung eines neuen Blocks, einen Zeitstempel mit
 dem Zeitpunkt des Erstellens, einem Target als Angabe des Schwierigkeitsgrades des Puzzles
 und einer Nonce (Number used once) als Beweis der Lösung des Puzzles (siehe \autoref{fig:BC_Erweiterung}).
-
-Aus diesen erweiterten Elemente wird zusammen mit der Referenz BH1 auf den vorangehenden 
+% nye
+Aus diesen zusätzlichen Elemente wird zusammen mit der Referenz BH1 auf den vorangehenden 
 Block Header und der Wurzel H34 des Hash-Baumes auf die Transaktionsdaten ein gemeinsamer 
 Hashwert berechnet. 
 Das Ziel des Puzzles ist einen Hashwert zu generieren, der kleiner als das Target ist. Die 
-Miner haben dafür einzig die Nonce als veränderbaren Wert zur Verfügung. Wurde das Rätsel
-gelöst, wird der neue Block zusammen mit der Nonce an alle anderen Rechnerknoten zur Prüfung
+Schwierigkeit ergibt sich damit indirekt proportional zum Target, denn je kleiner es ist, desto
+schwieriger ist die Lösungsfindung und umgekehrt.
+Die Miner haben einzig die Nonce als veränderbaren Wert zur Verfügung, um verschieden Hashes zu generieren. 
+Wurde das Rätsel gelöst, wird der neue Block zusammen mit der Nonce an alle anderen Miner zur Prüfung
 geschickt.
-Zuletzt wird dieser neue Block in die Blockchain aufgenommen , sofern er validiert und 
+Zuletzt wird dieser neue Block in die Blockchain aufgenommen, sofern er validiert und 
 fehlerfrei ist; ansonsten wird dieser verworfen.
 \cite[p.~22ff]{fill2020blockchain}
 
