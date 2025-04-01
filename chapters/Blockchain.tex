@@ -117,11 +117,14 @@ Transaktionen und neu durchgeführte Transaktionen ausschließlich in die Blockc
 aufgenommen, wenn diese von anderen Rechnerknoten validiert wurden.
 % dezentral --> Verzicht auf Intermediäre
 Zusätzlich ermöglicht die dezentrale Strukturierung der Blockchain den Verzicht auf 
-Intermediäre, wodurch Transaktionen in einem Peer-to-Peer Netzwerk durchgeführt
-werden können.
+Intermediäre, wodurch Transaktionen in einem Peer-to-Peer Netzwerk 
+% also direkt von Person zu Person
+durchgeführt werden können.
 \cite[p.~23]{fill2020blockchain}
 Dadurch sind die Kosten von Transaktionen länderunabhängig \cite[p.~12]{pirafelnerblockchaintechnologie}
-und die Ausführung ist schneller und kostengünstiger. \cite[p.~168]{chowdhary2025smart}
+und die Ausführung ist schneller 
+%weniger Zwischeninstanzen durchlaufen
+und kostengünstiger. \cite[p.~168]{chowdhary2025smart}
 
 
 \subsubsection{Smart Contracts}
@@ -144,9 +147,21 @@ Ebenso wie verschiedene Programmiersprachen den Befehlssatz eines Rechners umset
 %Googlen!!!
 existieren mehrere Programmiersprachen, die den Befehlssatz für Smart Contracts
 syntaktisch leichter nutzbar machen. Die bekannteste für Ethereum ist hier Solidity,
-die 2014 von Dr. Gavin Wood vorgestellt wurde. Die wichtigste Eigenschaft für
-jede Programmiersprache um Smart Contracts zu definieren ist, dass sie auf jeder
-Rechnerarchitektur, unabhängig von der Hard-Ware und dem Prozessor, funktioniert.
+die 2014 von Dr. Gavin Wood vorgestellt wurde. Da die Ausführung eines Smart Contracts
+in den einzelnen Rechnerknoten, also bei den Minern, stattfindet, ist es unerlässlich, 
+dass die verwendete Sprache auf jeder Rechnerarchitektur interpretiert werden kann.
+% Die wichtigste Eigenschaft für jede Programmiersprache um Smart Contracts zu definieren ist, dass sie auf jeder Rechnerarchitektur, unabhängig von der Hard-Ware und dem verwendeten Prozessor, funktioniert. 
+Dazu wird der Code des Smart Contract vom Compiler in 
+Bytecode umgewandelt und als dieser durch eine Transaktion in die Blockchain 
+aufgenommen. % eingefügt
+%Ausführung eines SC
+Sobald ein Smart Contract von einer Transaktion aufgerufen wird, wird der Bytecode 
+auf der Ethereum Virtual Machine interpretiert.
+Sobald ein Smart Contract von einer anderen Transaktion aufgerufen wird, hat sie 
+Zugriff auf einige Daten innerhalb der BlockChain. Ihr liegen sämtliche Informationen
+in ihrem
+
+\cite[p.~57ff]{fill2020blockchain}
 
 
 
