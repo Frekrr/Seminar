@@ -165,12 +165,21 @@ dass die verwendete Sprache auf jeder Rechnerarchitektur interpretiert werden ka
 Dazu wird der Code des Smart Contract vom Compiler in 
 Bytecode umgewandelt und als dieser durch eine Transaktion in die Blockchain 
 aufgenommen. % eingefügt
+Die Blockchain wird also um einen Block, der den Smart Contract beinhaltet, erweitert.
 %Ausführung eines SC
 Sobald ein Smart Contract von einer Transaktion aufgerufen wird, wird der Bytecode 
 auf der Ethereum Virtual Machine interpretiert.
 Sobald ein Smart Contract von einer anderen Transaktion aufgerufen wird, hat sie 
-Zugriff auf Daten innerhalb der Blockchain. 
+Zugriff auf verschiedene Daten innerhalb der Blockchain. 
 % Daten weiter spezifizieren?
+% Variation für Inforamtionszugriff:
+Darunter zählen alle spezifizierten Daten im Smart Contract selbst, wie eigene Variablen
+und Datenstrukturen. Informationen der aufrufenden Transaktion sind ebenfalls für den
+Smart Contract zugänglich, um mittels der mitgelieferten Adresse die Identität des Aufrufers
+zu authentifizieren. Aus der gesamten Blockchain kann ein Smart Contract neben
+allgemein zugänglichen Informationen auch auf bestimmte Daten zugreifen, wie z.B. 
+Tokens die dem Aufrufer zugeschrieben sind (vgl Kapitel \ref{sec:Tokenization}).
+
 Sie kann auch weitere Smart Contracts in der Blockchain aufrufen und so mehrere hintereinander 
 ausführen oder Informationen für alle Rechnerknoten einsehbar gestalten.
 
@@ -181,6 +190,7 @@ ausführen oder Informationen für alle Rechnerknoten einsehbar gestalten.
 
 
 \subsubsection{Tokenization von Assets}
+\label{sec:Tokenization}
 
 
 % Erleichter es privaten Anlegern
