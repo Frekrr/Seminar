@@ -144,8 +144,9 @@ Smart Contracts sind digitalisierte und automatisierte Verträge.
 \cite[p.~14]{pirafelnerblockchaintechnologie}
 Treten die in ihnen definierten Bedingungen ein, so werden die einprogrammierten Aktionen
 ausgeführt.
-% Sie führen unter erfüllten Bedingungen die einprogrammierten Befehle, wie z.B. weitere Transaktionen aus. 
 \cite[p.~55f]{fill2020blockchain}
+
+% technische Umsetzung
 Voraussetzung ist, dass die Blockchain-Plattform Smart Contracts in Form von 
 Befehlssätzen unterstützt. Die Bitcoin-Plattform unterstützt zum Beispiel nur rudimentäre
 Skripte mit denen sich hauptsächlich weitere Transaktionen automatisieren lassen. 
@@ -155,7 +156,6 @@ Im Gegensatz dazu stellt die Ethereum-Plattform einen viel umfangreicheren Befeh
 zur Verfügung. Dieser ist sogar Turing-Vollständig, wodurch er dieselbe Mächtigkeit wie gängige
 Programmiersprachen besitzt.
 % was ihn dieselbe Mächtigkeit wie herkömmliche Programmiersprache haben lässt. 
-
 Ebenso wie verschiedene Programmiersprachen den Befehlssatz eines Rechners umsetzen
 %Googlen!!!
 existieren mehrere Programmiersprachen, die den Befehlssatz für Smart Contracts
@@ -181,14 +181,30 @@ Smart Contract zugänglich, um mittels der mitgelieferten Adresse die Identität
 zu authentifizieren. Aus der gesamten Blockchain kann ein Smart Contract neben
 allgemein zugänglichen Informationen auch auf bestimmte Daten zugreifen, wie z.B. 
 Tokens die dem Aufrufer zugeschrieben sind (vgl Kapitel \ref{sec:Tokenization}).
+Sind zur Ausführung des Contracts externe Informationen relevant, ist die Einbindung von Oracles
+eine gängige Praxis. Mithilfe dieser [...] kann auf Datenbanken oder andere Datenspeicher zugegriffen werden.
 Ein Smart Contract kann auch weitere Smart Contracts in der Blockchain aufrufen und so 
-mehrere Automationen hintereinander schalten oder Informationen für alle Rechnerknoten in Events
+mehrere Automationen in Reihe schalten oder Informationen für alle Rechnerknoten in Events
 einsehbar gestalten.
 \cite[p.~57ff]{fill2020blockchain}
 
 % Anwendungsgebiete und Vorteile spezifizieren
-Smart Contracts sind für standardisierte Verträge sehr effizient. 
-\cite[p.168f]{chowdhary2025smart}
+Die Eigenschaft finanzielle Vertragsbestimmungen automatisch abzuhandeln macht Smart Contracts 
+besonders für standardisierte Verträge effizient. Sobald die im Smart Contract definierten Bedingungen
+eintreten, wird automatisch eine Transaktion ausgeführt und der Vertrag damit erfüllt.
+So können manuelle Prozessschritte weiter reduziert werden, wodurch einhergehende Fehlerquellen
+der menschlichen Bearbeitung reduziert werden. 
+Ein konkreter Anwendungsfall in Versicherungsfirmen ist ein Versicherungsanspruch.
+\cite[p.~168f]{chowdhary2025smart}
+Dabei ist vor allem die Höhe des Anspruches sowohl für das Unternehmen, als auch für den
+Anspruchsteller relevant. Diese ist oft von vielen Faktoren abhängig. Um die genaue Höhe zu bestimmen,
+können die relevanten Parameter z.B. in einem externen Tool aufgenommen werden, auf die der Smart Contract
+über Oracles zugreifen kann. Die Gesamthöhe wird dann innerhalb des Contracts errechnet und kann automatisch
+an den Anspruchsteller in Form einer Transaktion überwiesen werden. 
+Für Versicherungsfirmen ist die Integration einer Blockchain-Technologie zusammen mit Smart Contracts
+auch für die Prävention von Versicherungsbetrug relevant.
+\cite[p.~10]{chenthara2021privacy}
+
 
 
 % Nachteile
@@ -212,7 +228,7 @@ Smart Contracts sind für standardisierte Verträge sehr effizient.
 % \cite[p.~72]{fill2020blockchain}
 
 
-\subsection{Risiken bei der Integration von Blockshains}
+\subsection{Risiken bei der Integration von Blockchains}
 \cite[p.~17]{pirafelnerblockchaintechnologie}
 
 
