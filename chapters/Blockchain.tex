@@ -138,22 +138,16 @@ Smart Contracts sind digitalisierte und automatisierte Verträge.
 Treten die in ihnen definierten Bedingungen ein, so werden die einprogrammierten Aktionen
 ausgeführt.
 \cite[p.~55f]{fill2020blockchain}
-
 % technische Umsetzung
 Voraussetzung ist, dass die Blockchain-Plattform Smart Contracts in Form von 
 Befehlssätzen unterstützt. Die Bitcoin-Plattform unterstützt zum Beispiel nur rudimentäre
 Skripte mit denen sich hauptsächlich weitere Transaktionen automatisieren lassen. 
-Außerdem sind die verfügbaren Befehle in keinem Dokument spezifiziert und sind nur auf
-der Code-Basis der Plattform einsehbar.
-Im Gegensatz dazu stellt die Ethereum-Plattform einen viel umfangreicheren Befehlssatz
+
+Die Ethereum-Plattform hingegen stellt einen viel umfangreicheren Befehlssatz
 zur Verfügung. Dieser ist sogar Turing-Vollständig, wodurch er dieselbe Mächtigkeit wie gängige
 Programmiersprachen besitzt.
-% was ihn dieselbe Mächtigkeit wie herkömmliche Programmiersprache haben lässt. 
-Ebenso wie verschiedene Programmiersprachen den Befehlssatz eines Rechners umsetzen
-%Googlen!!!
-existieren mehrere Programmiersprachen, die den Befehlssatz für Smart Contracts
-syntaktisch leichter nutzbar machen. Die bekannteste für Ethereum ist hier Solidity,
-die 2014 von Dr. Gavin Wood vorgestellt wurde. Da die Ausführung eines Smart Contracts
+Die bekannteste Programmiersprache für die Umsetzung von Smart Contracts auf der Ethereum-Blockchain 
+ist Solidity, die erstmals 2014 von Dr. Gavin Wood vorgestellt wurde. Da die Ausführung eines Smart Contracts
 in den einzelnen Rechnerknoten, also bei den Minern, stattfindet, ist es unerlässlich, 
 dass die verwendete Sprache auf jeder Rechnerarchitektur interpretiert werden kann.
 % Die wichtigste Eigenschaft für jede Programmiersprache um Smart Contracts zu definieren ist, dass sie auf jeder Rechnerarchitektur, unabhängig von der Hard-Ware und dem verwendeten Prozessor, funktioniert. 
@@ -164,18 +158,18 @@ Die Blockchain wird also um einen Block, der den Smart Contract beinhaltet, erwe
 %Ausführung eines SC
 Sobald ein Smart Contract von einer Transaktion aufgerufen wird, wird der Bytecode 
 auf der Ethereum Virtual Machine interpretiert.
-Sobald ein Smart Contract von einer anderen Transaktion aufgerufen wird, hat sie 
-Zugriff auf verschiedene Daten innerhalb der Blockchain. 
+Ein Smart Contract hat während der Ausführung Zugriff auf verschiedene Daten innerhalb der 
+Blockchain. 
 % Daten weiter spezifizieren?
 % Variation für Inforamtionszugriff:
 Darunter zählen alle spezifizierten Daten im Smart Contract selbst, wie eigene Variablen
-und Datenstrukturen. Informationen der aufrufenden Transaktion sind ebenfalls für den
-Smart Contract zugänglich, um mittels der mitgelieferten Adresse die Identität des Aufrufers
+und Datenstrukturen. Informationen der aufrufenden Transaktion sind ebenfalls zugänglich, um 
+mittels der mitgelieferten Adresse die Identität des Aufrufers
 zu authentifizieren. Aus der gesamten Blockchain kann ein Smart Contract neben
 allgemein zugänglichen Informationen auch auf bestimmte Daten zugreifen, wie z.B. 
 Tokens die dem Aufrufer zugeschrieben sind (vgl Kapitel \ref{sec:Tokenization}).
 Sind zur Ausführung des Contracts externe Informationen relevant, ist die Einbindung von Oracles
-eine gängige Praxis. Mithilfe dieser [...] kann auf Datenbanken oder andere Datenspeicher zugegriffen werden.
+eine gängige Praxis. Mithilfe dieser kann auf Datenbanken oder andere Datenspeicher zugegriffen werden.
 Ein Smart Contract kann auch weitere Smart Contracts in der Blockchain aufrufen und so 
 mehrere Automationen in Reihe schalten oder Informationen für alle Rechnerknoten in Events
 einsehbar gestalten.
@@ -185,8 +179,8 @@ einsehbar gestalten.
 Die Eigenschaft finanzielle Vertragsbestimmungen automatisch abzuhandeln macht Smart Contracts 
 besonders für standardisierte Verträge effizient. Sobald die im Smart Contract definierten Bedingungen
 eintreten, wird automatisch eine Transaktion ausgeführt und der Vertrag damit erfüllt.
-So können manuelle Prozessschritte weiter reduziert werden, wodurch einhergehende Fehlerquellen
-der menschlichen Bearbeitung reduziert werden. 
+So können manuelle Prozessschritte reduziert werden, wodurch einhergehende Fehlerquellen
+der menschlichen Bearbeitung reduziert werden können. 
 Ein konkreter Anwendungsfall in Versicherungsfirmen ist ein Versicherungsanspruch.
 \cite[p.~168f]{chowdhary2025smart}
 Dabei ist vor allem die Höhe des Anspruches sowohl für das Unternehmen, als auch für den
@@ -196,8 +190,8 @@ können die relevanten Parameter z.B. in einem externen Tool aufgenommen werden,
 an den Anspruchsteller in Form einer Transaktion überwiesen werden. 
 Für Versicherungsfirmen bietet die Integration einer Blockchain-Technologie zusammen mit Smart Contracts
 auch einen Schutz vor Versicherungsbetrug. Die Transparenz aller getätigter Transaktionen
-und geleisteter Services werden auf der Blockchain gespeichert und sind damit für einen Smart Contract
-einsehbar. Zudem sind die Daten durch die verteilte Organisationsstruktur der Blockchain sicher vor 
+und geleisteter Services können auf der Blockchain gespeichert werden und sind damit für einen Smart Contract
+einsehbar. Zudem sind die Daten durch das Konsensverfahren der Blockchain sicher vor 
 Manipulationen. 
 Dadurch können falsche Forderungen sofort erkannt und die weitere Ausführung des Smart
 Contracts abgebrochen werden.
@@ -207,12 +201,11 @@ Andere Einsatzmöglichkeiten sind im Bankwesen eine Darlehensvergabe oder das Tr
 mit Derivaten. \cite[p.~168f]{chowdhary2025smart}
 Für Darlehensvergaben müsste man sich weiterhin persönlich auf die Vertragsbedingungen 
 einigen. Danach können diese im Smart Contract aufgenommen werden und das Darlehen wird 
-erst nach Erfüllung der Bedingungen automatisch ausgezahlt.
+ nach Erfüllung der Bedingungen automatisch ausgezahlt, was Warte- und Bearbeitungszeiten verkürzt.
 \cite{Gronemann2018darlehen}
 Bei der Nutzung von Smart Contracts ist es eine Notwendigkeit, dass diese von Beginn an genau 
 definiert sind und alle Randfälle beachtet wurden, da sie nach der Aufnahme in die Blockchain 
 nicht mehr angepasst werden können. 
-
 \cite[p.~58]{fill2020blockchain}
 
 % Anfechtbarkeit (pfilner, p.14)
