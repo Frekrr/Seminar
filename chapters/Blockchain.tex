@@ -57,9 +57,9 @@ Die Blockchain ist  ein verteiltes Register mit Integritätsgarantie. Die Integr
 wird hierbei sichergestellt, indem eine Änderung an einem beliebigen Punkt in der
 Blockchain eine Anpassung in allen Blöcken nach sich zieht, die eine direkte oder
 indirekte Referenz auf diesen Block haben; also im betroffenen Block selbst und den
-nachfolgenden. Änderungen und Erweiterungen der Blockchain werden dank klarer 
-und verschlüsselter Eigentumsansprüche, sowie einem Konsensalgorithmus (siehe \ref{sec:Erweiterung}), 
-werden Änderungen nur dann vorgenommen, wenn sie berechtigt und richtig sind.
+Nachfolgenden. Änderungen und Erweiterungen der Blockchain werden dank klarer 
+und verschlüsselter Eigentumsansprüche, sowie einem Konsensalgorithmus (siehe \ref{sec:Erweiterung})
+nur dann vorgenommen, wenn sie berechtigt und richtig sind.
 % Oder:
 % Als Schutzmechanismus werden Änderungen jedoch nur dann vorgenommen, wenn sie durch 
 % klare und verschlüsselte Eigentumsansprüche berechtigt sind.
@@ -105,38 +105,29 @@ in Prozessabläufen mit sich gebracht. Manche Sektoren sind aufgrund der Blockch
 wie z.B. der Kryptomarkt. Andere Sektoren wurden durch diese stark verändert, wie der Aktienhandel. 
 % Wieder andere Bereiche, in denen die Blockchain einen essentiellen Teil bildet, sind nicht sehr bekannt. 
 Im Folgenden wird der Einfluss der Blockchain-Technologie auf zuvor vorhandene Finanzsektoren, sowie neu erschlossene Sektoren 
-betrachtet.
+betrachtet. 
+/TODO
 
 \subsubsection{Transaktionen}
-Der Kryptomarkt ist der wohl bekannteste Bereich, in der die Blockchain ein 
-grundlegender Bestandteil ist. 
+Der Kryptomarkt ist der wohl bekannteste Bereich, der auf der Blockchain-Technologie aufbaut.
+%in der die Blockchain ein grundlegender Bestandteil ist. 
 Die stärksten Kryptowährungen sind Bitcoin und Ethereum. 
-Die Blockchain gewährleistet die Sicherheit und Nachvollziehbarkeit von Transaktionen.
+Die Blockchain gewährleistet die Sicherheit und Nachvollziehbarkeit von Transaktionen. 
 \cite[p.~168]{chowdhary2025smart}
+Die Sicherheit wird durch die Nutzung eines Konsensalgorithmus erreicht, der nur validierte 
+Änderungen erlaubt. Die Nachvollziehbarkeit wird  durch den Aufbau der Blockchain erreicht, da stets 
+alle vorherigen Transaktionen einsehbar sind, indem die Header-Referenzen rekursiv zurückverfolgt
+werden können (vgl \autoref{fig:BC_Aufbau}).
 % Verweis auf vorher verifizierte Blöcke & vollst. Kopie auf jedem teilnehmenden Gerät.
-So ermöglicht sie einen Peer-to-Peer Austausch von digitalen
-Währungseinheiten ohne Intermediäre, wie Banken und andere Zahlungsdienstleister,
-die die Vertrauenswürdigkeit der Transaktionsakteure beglaubigen sollen.
+Im traditionellen Zahlungsverkehr würden Banken und andere Zahlungsdienstleister die 
+Vertrauenswürdigkeit der Transaktionsakteure beglaubigen.
+Das Zusammenspiel der Datenintegrität, Nachvollziehbarkeit und dezentralen Struktur der
+Blockchain ermöglicht den Versicht auf diese Intermediäre. Stattdessen können digitalte 
+Währungseinheiten in einem Peer-to-Peer Netzwerk ausgetauscht werden.
 \cite[p.~32]{fill2020blockchain}
-Die Nachvollziehbarkeit wird dadurch erreicht, indem die Transaktionen fest in der 
-Blockchain codiert sind (siehe \autoref{fig:BC_Aufbau}).
 %\cite[p.~11]{pirafelnerblockchaintechnologie}
-
-% Sicherheit
-Ein Konsensalgorithmus gewährleistet die Sicherheit und Integrität der Daten.
-Am Beispiel des Bitcoin wird das Konzept \glqq Proof-of-Work\grqq{} analog zum Abschnitt 
-\ref{sec:Erweiterung} angewendet. Demnach werden Änderungen von bereits getätigten
-Transaktionen und neu durchgeführte Transaktionen ausschließlich in die Blockchain
-aufgenommen, wenn diese von anderen Rechnerknoten validiert wurden.
-% dezentral --> Verzicht auf Intermediäre
-Zusätzlich ermöglicht die dezentrale Strukturierung der Blockchain den Verzicht auf 
-Intermediäre, wodurch Transaktionen in einem Peer-to-Peer Netzwerk 
-% also direkt von Person zu Person
-durchgeführt werden können.
-\cite[p.~23]{fill2020blockchain}
 Dadurch sind die Kosten von Transaktionen länderunabhängig \cite[p.~12]{pirafelnerblockchaintechnologie}
 und die Ausführung ist schneller 
-%weniger Zwischeninstanzen durchlaufen
 und kostengünstiger. \cite[p.~168]{chowdhary2025smart}
 
 
