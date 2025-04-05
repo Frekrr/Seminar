@@ -63,24 +63,25 @@ finanzielle Schäden minimiert werden.
 
 \subsubsection{Smart Contracts und IoT}
 % IoT Device Administration
-Smart Contracts können die Geräteverwaltung für IoTs automatisieren und dezentralisieren. 
-In zentralen Strukturen wird immer ein Intermediär benötigt, der beispielsweise ein Update-Request von einem
-Gerät A an ein Gerät B weiterleiten, welches dann das Update ausführt.
+Smart Contracts bieten die Möglichkeit die Geräteverwaltung von IoTs zu automatisieren und zu dezentralisieren.
 Mittels einer Blockchain kann ein System konstruiert werden, welches die Kommunikation zwischen IoT-Geräten
-durch Blöcke realisiert.
+durch Blöcke realisiert. 
+Vergleichsweise wird in zentralen Strukturen immer ein Intermediär benötigt, der beispielsweise ein 
+Update-Request von einem Gerät A an ein Gerät B weiterleitet, welches dann das Update vornimmt.
 
-Eine derartige Struktur kann wie in \autoref{fig:SC-IoT_Update} dargestellt, umgesetzt werden.
-Im ersten Schritt (1) schickt Device A einen Smart Contract an die Blockchain. Die Miner validieren 
+Eine derartige Kommunikationsstruktur kann wie in \autoref{fig:SC-IoT_Update} dargestellt, umgesetzt werden.
+Im ersten Schritt (1) schickt Device A einen Smart Contract an die Blockchain. Die Miner validieren diesen
 und fügen den Contract in einem neuen Block hinzu (2 - 3). Dadurch besitzen alle Geräte, die Teil dieser 
 Struktur sind, eine lokale Kopie des Smart Contract mit der Update-Funktion (4 - 5).
 Nach der Verteilung der Daten ruft Gerät A die Update-Funktion in einer neuen Transaktion auf, welche 
-wieder von den Minern bestätigt wird (6 - 7). 
-Der Smart Contract fügt bei der Ausführung einen neuen Block hinzu, welcher ein Event zum
-Triggern des Updates auf den IoT-Geräten beinhaltet (8). 
-Alle Geräte in diesem Netzwerk registrieren das Event und rufen die zugehörige Funktionalität zur Durchführung
-des Updates auf (9). Anschließend schicken sie eine Bestätigung mit ihrem Status des Updates an das Netzwerk (10 - 11).
+wieder von den Minern in einem weiteren Block bestätigt wird (6 - 7). 
+Der Smart Contract fügt bei der Ausführung einen dritten Block hinzu (8). Dieser beinhaltet ein Event,
+welches den Update-Prozess auslöst.
+Alle IoT-Geräte in diesem Netzwerk registrieren das Event und rufen die zugehörige Funktionalität auf, was
+das Update durchführt (9). 
+Anschließend schicken sie eine Bestätigung mit ihrem Status des Updates an das Netzwerk (10 - 11).
 
-So können Firmware-Updates und andere Software-Erweiterungen mit geringem Organisationsaufwand auf allen 
+Auf diese Weise können Firmware-Updates und andere Software-Erweiterungen mit geringem Organisationsaufwand auf allen 
 Geräten durchgeführt werden. 
 Auch Geräte-spezifische Funktionalitäten eines IoT können so von einem anderen Gerät aufgerufen werden.
 Dieser Ablauf ist einfach skalierbar, da der Datenaustausch über Broadcasts stattfindet.  
@@ -98,7 +99,7 @@ verwendet werden.
 Wie im Kapitel \ref{sec:Risk_Management} erklärt, können Leistungsberichte von IoT-Geräten erstellt werden.
 Durch eine Erweiterung um Smart Contracts kann der Anstoß zum Wartungsprozess automatisiert werden. Bei einem
 festen Vertragspartner, welcher diese durchführt, kann sogar der gesamte Prozess automatisiert werden. 
-Der Contract kann bei der Ausführung eine Buchung zum nächst möglichen Zeitpunkt auslösen und bei Erfüllung 
+Der Contract kann bei der Ausführung eine Buchung zum nächstmöglichen Termin auslösen und bei Erfüllung 
 der Wartung automatisch die Kosten begleichen.
 \cite[p.~169ff]{chowdhary2025smart}
 
