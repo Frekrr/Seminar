@@ -32,11 +32,10 @@ Waren können schneller weiterverarbeitet werden.
 
 \subsubsection{Risiko-Management}
 \label{sec:Risk_Management}
-Der kontinuierliche Datenstrom von IoT-Sensoren kann zur Risikobewertung hergenommen werden.
-Die Auswertung dieser Daten kann im Nachgang zur Eingrenzung potentieller Schäden 
-verwendet werden.
-Versicherungsunternehmen können die Daten aus einem Auto verwenden, sofern es beispielsweise
-eine Car2Car-Kommunikation besitzt, um die Beiträge an das individuelle Fahrverhalten
+Der kontinuierliche Datenstrom von IoT-Sensoren kann zur Risikobewertung herangezogen, als auch zur 
+Eingrenzung potentieller Schäden analysiert werden.
+So können beispielsweise Versicherungsunternehmen die Daten aus einem Auto verwenden, sofern es eine 
+Car2X-Kommunikation besitzt, um die Beiträge an das individuelle Fahrverhalten
 anzupassen. 
 Wenn die Sensoren oft einen riskanten Fahrstil melden, wie Geschwindigkeitsüberschreitungen oder 
 nicht-einhalten von Mindestabständen, kann der Beitrag für die einzelne Person erhöht werden. Auf der 
@@ -63,7 +62,7 @@ finanzielle Schäden minimiert werden.
 
 \subsubsection{Smart Contracts und IoT}
 % IoT Device Administration
-Smart Contracts bieten die Möglichkeit die Geräteverwaltung von IoTs zu automatisieren und zu dezentralisieren.
+Smart Contracts bieten die Möglichkeit die Verwaltung von IoT-Geräten zu automatisieren und zu dezentralisieren.
 Mittels einer Blockchain kann ein System konstruiert werden, welches die Kommunikation zwischen IoT-Geräten
 durch Blöcke realisiert. 
 Vergleichsweise wird in zentralen Strukturen immer ein Intermediär benötigt, der beispielsweise ein 
@@ -77,13 +76,13 @@ Nach der Verteilung der Daten ruft Gerät A die Update-Funktion in einer neuen T
 wieder von den Minern in einem weiteren Block bestätigt wird (6 - 7). 
 Der Smart Contract fügt bei der Ausführung einen dritten Block hinzu (8). Dieser beinhaltet ein Event,
 welches den Update-Prozess auslöst.
-Alle IoT-Geräte in diesem Netzwerk registrieren das Event und rufen die zugehörige Funktionalität auf, was
-das Update durchführt (9). 
+Alle IoT-Geräte in diesem Netzwerk registrieren das Event und rufen die zugehörige Funktionalität auf, 
+welches das Update durchführt (9). 
 Anschließend schicken sie eine Bestätigung mit ihrem Status des Updates an das Netzwerk (10 - 11).
 
 Auf diese Weise können Firmware-Updates und andere Software-Erweiterungen mit geringem Organisationsaufwand auf allen 
 Geräten durchgeführt werden. 
-Auch Geräte-spezifische Funktionalitäten eines IoT können so von einem anderen Gerät aufgerufen werden.
+Auch gerätespezifische Funktionalitäten eines IoT-Geräts können so von einem anderen Gerät aufgerufen werden.
 Dieser Ablauf ist einfach skalierbar, da der Datenaustausch über Broadcasts stattfindet.  
 Dadurch können beliebig viele IoT-Geräte dem Netzwerk hinzugefügt werden ohne den Kommunikationsaufwand 
 proportional zu erhöhen. 
@@ -94,11 +93,14 @@ Authentifizierung dieses Prozesses.
 
 
 % Wartungen von anderen Geräten (Smarte Geldautomaten)
-Smart Contracts können auch zur Planung und Koordinierung von Wartungen oder Steigerung der Betriebseffizienz 
-verwendet werden.
-Wie im Kapitel \ref{sec:Risk_Management} erklärt, können Leistungsberichte von IoT-Geräten erstellt werden.
-Durch eine Erweiterung um Smart Contracts kann der Anstoß zum Wartungsprozess automatisiert werden. Bei einem
-festen Vertragspartner, welcher diese durchführt, kann sogar der gesamte Prozess automatisiert werden. 
+Smart Contracts können auch zur Planung und Koordinierung von Wartungen oder zur Steigerung der 
+Betriebseffizienz verwendet werden.
+Leistungsberichte von IoT-Geräten (siehe Kapitel \ref{sec:Risk_Management}) können durch eine Erweiterung um 
+Smart Contracts den Anstoß zum Wartungsprozess automatisieren.
+% Wie im Kapitel \ref{sec:Risk_Management} erklärt, können Leistungsberichte von IoT-Geräten erstellt werden.
+% Durch eine Erweiterung um Smart Contracts kann der Anstoß zum Wartungsprozess automatisiert werden. 
+Bei einem festen Vertragspartner für Wartungen kann sogar der gesamte Prozess automatisiert 
+werden. 
 Der Contract kann bei der Ausführung eine Buchung zum nächstmöglichen Termin auslösen und bei Erfüllung 
 der Wartung automatisch die Kosten begleichen.
 \cite[p.~169ff]{chowdhary2025smart}
