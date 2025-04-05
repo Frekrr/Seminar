@@ -2,6 +2,9 @@
 Die Blockchain-Technologie bringt bereits einige Vorteile für Finanzsektor mit sich.
 In der Kombination mit Internet of Things (IoT) lassen sich einige der bereits erörterten Einsatzgebiete
 für breitere Anwendungsmöglichkeiten erweitern.
+% IoT 
+% kurz, dass ioT Daten sammeln können, die in der Blockchian gespeichert werden können und in Smart Contracts
+% verarbeitet werden können
 
 \subsection{Anwendungsmöglichkeiten/Synergien mit Internet of Things}
 
@@ -49,13 +52,59 @@ einhergehende finanzielle Schäden minimieren.
 % Kreditrisiko in der Lieferkette \cite[p.~347ff]{Zhang2021Research}
 
 
+
+% Smart Contracts und IoT
+\begin{figure}[h]
+    \begin{center}
+        \includegraphics[height=5cm]{SC-IoT_Updating.png}
+    \end{center}
+    \quelle{\cite[p.~75]{Choi2018DeviceControl}}
+    \caption{Updating IoT-Geräte mittels eines Smart Contract}
+    \label{fig:SC-IoT_Update}
+\end{figure}
+
 \subsubsection{Smart Contracts und IoT}
+% IoT Device Administration
+Smart Contracts können die Geräteverwaltung für IoTs automatisieren und dezentralisieren. 
+In zentralen Strukturen wird immer ein Intermediär benötigt, der beispielsweise ein Update-Request von einem
+Gerät A an ein Gerät B weiterleiten, welches dann das Update ausführt.
+Mittels einer Blockchain kann ein System konstruiert werden, welches die Kommunikation zwischen IoT-Geräten
+durch Blöcke realisiert.
+
+Eine derartige Struktur kann wie in \autoref{fig:SC-IoT_Update} dargestellt, umgesetzt werden.
+Im ersten Schritt (1) schickt Device A einen Smart Contract an die Blockchain. Die Miner validieren 
+und fügen den Contract in einem neuen Block hinzu (2 - 3). Dadurch besitzen alle Geräte, die Teil dieser 
+Struktur sind, eine lokale Kopie des Smart Contract mit der Update-Funktion (4 - 5).
+Nach der Verteilung der Daten ruft Gerät A die Update-Funktion in einer neuen Transaktion auf, welche 
+wieder von den Minern bestätigt wird (6 - 7). 
+Der Smart Contract fügt bei der Ausführung einen neuen Block hinzu, welcher ein Event zum
+Triggern des Updates auf den IoT-Geräten beinhaltet (8). 
+Alle Geräte in diesem Netzwerk registrieren das Event und rufen die zugehörige Funktionalität zur Durchführung
+des Updates auf (9). Anschließend schicken sie eine Bestätigung mit ihrem Status des Updates an das Netzwerk (10 - 11).
+
+So können Firmware-Updates und andere Software-Erweiterungen mit geringem Organisationsaufwand auf allen 
+Geräten durchgeführt werden. 
+Auch Geräte-spezifische Funktionalitäten eines IoT können so von einem anderen Gerät aufgerufen werden.
+Dieser Ablauf ist einfach skalierbar, da der Datenaustausch über Broadcasts stattfindet.  
+Dadurch können beliebig viele IoT-Geräte dem Netzwerk hinzugefügt werden ohne den Kommunikationsaufwand 
+proportional zu erhöhen. 
+Zusätzlich sichern die Eigenschaften der Blockchain die Transparenz, Datenintegrität und Sicherheit der
+Authentifizierung dieses Prozesses.
+%Zusätzlich ist dieser Prozess durch die Eigenschaften der Blockchain transparent, 
+\cite[p.~74f]{Choi2018DeviceControl}
+
 
 
 \cite[p.~171]{chowdhary2025smart}
 
 % IoT-Geräteverwaltung
+
 % Wartungen von anderen Geräten (Smarte Geldautomaten)
+
+% Smart Wearables
 
 
 \subsection{Ausblick und Risiken}
+
+% Chantara: Daten von Versicherungen und sonstige gespeicherte Daten sind öffentlich nur als Hashes einsehbar
+% -> kein Rückschluss auf die eigentlichen Datenwerte möglich
