@@ -196,18 +196,30 @@ Energie um einen Rechnerknoten auszuwählen (vgl \autoref{fig:PoWPoS_Energy}). D
 Berechnungsiterationen zustande, die benötigt werden um eine passende Nonce zu finden 
 (siehe Kapitel \ref{sec:Erweiterung}).
 \newline
-Das Prinzip "Proof-of-Stake" (PoS) ist hingegen viel energieeffizienter 
+Das Prinzip \glqq Proof-of-Stake\grqq{} (PoS) ist hingegen viel energieeffizienter 
 (vgl \autoref{fig:PoWPoS_Energy}), da der Auswahlalgorithmus um einiges simpler ist.
 Aus der \autoref{fig:PoWPoS_Energy} geht hervor, dass bei einem gemischten Konsesus-Modus bereits bei 
 Modus 5 deutliche Energieeinsparungen im Vergleich zum reinen PoW im Modus 6 erkennbar sind. Demzufolge genügt ein Anteil von 20\% PoS im 
 Gesamtgefüge, um die Leistungsaufnahme zu senken (vgl \autoref{fig:PoWPoS_Modes}).
-
 Die Einfachheit des Algorithmus besteht darin, dass dieser seine Auswahl einzig von den Stakes abhängig
 trifft. Die Stakes sind hierbei der Anteil an Kryptowährung, den ein Nutzer im Netzwerk besitzt.
 Es wird der Nutzer gewählt, welcher die meisten Stakes oder mehr als ein Gro\ss teil der Nutzer besitzt.
 Bei diesem Auswahlprinzip wird darauf vertraut, dass ein Nutzer mit vielen Stakes keinen Anreiz hat die
 Daten zu manipulieren.
 \cite[p.280]{Nair2021Energy}
+\newline
+Das letzte Prinzip \glqq Proof-of-Energy-Efficiency\grqq{} (PoEE) ist grundlegend auf eine hohe 
+Energieeffizienz ausgerichtet. Die Auswahl eines Rechnerknotens wird anhand der nachgewiesenen Steigerung
+der Energieeffizienz getroffen. 
+Für den Nachweis werden analog zu Transaktionen auch die Energiesparma\ss nahmen auf der Blockchain 
+gespeichert. Um weitere Anreize für die Reduktion des Energieverbrauchs zu schaffen, werden den 
+Minern Prämien für Optimierungsma\ss nahmen angeboten.
+So kann man einen Anteil der Kryptowährung erhalten, wenn beispielsweise die Spitzenlast im 
+Energieverbrauch gesenkt wird oder erneuerbare Energien für das Mining genutzt werden. 
+PoEE ist kompatibel mit anderen Konsens-Algorithmen und man kann diese verschachtelt strukturieren, um 
+die Vorteile aus beiden zu nutzen.
+Da PoW 
+\cite[p.~2ff]{Athar2024BC_Sustainability}
 
 
 
