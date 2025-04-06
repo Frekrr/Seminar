@@ -24,9 +24,10 @@ Transportweg aufgezeichnet werden.
 Die Blockchain-Technologie bietet die Funktionalität, die erfassten Informationen in Blöcken
 zu speichern. Damit fungiert die Blockchain wie ein Transportbericht der gesamten Lieferkette und 
 sichert nebenbei die Integrität und Richtigkeit der Daten, sofern keine Sensorprobleme vorliegen. 
-Zusätzlich kann bei der Zustellung der Lieferung ein Smart Contract die Zahlung automatisch durchführen.
+Zusätzlich kann bei der Zustellung der Lieferung ein Smart Contract die Zahlung automatisch ausführen.
 So werden der Zeitaufwand und die Kosten für Qualitätsprüfungen reduziert und vor allem verderbliche 
 Waren können schneller weiterverarbeitet werden.
+Zudem können Finanzinstitute die Lieferkette
 \cite[p.~169f]{chowdhary2025smart}
 
 
@@ -51,7 +52,7 @@ Betriebseffizienz steigern soll.
 Eine mögliche Anwendung kann daraus bestehen, einen Leistungsbericht von Maschinen in einer Produktionskette
 zu erstellen. IoT-Sensoren können hierfür einen kontinuierlichen Datenstrom als Basis für den Bericht liefern.
 Aus dem Bericht können nachfolgen Leistungsschwankungen und -einbrüche erkannt werden und frühzeitig 
-Gegenmaßnahmen eingeleitet werden. Dadurch können Ausfälle der Produktionskette und damit einhergehende 
+Gegenma\ss nahmen eingeleitet werden. Dadurch können Ausfälle der Produktionskette und damit einhergehende 
 finanzielle Schäden minimiert werden.
 \cite[p.~169]{chowdhary2025smart}
 
@@ -78,7 +79,7 @@ Der Smart Contract fügt bei der Ausführung einen dritten Block hinzu (8). Dies
 welches den Update-Prozess auslöst.
 Alle IoT-Geräte in diesem Netzwerk registrieren das Event und rufen die zugehörige Funktionalität auf, 
 welches das Update durchführt (9). 
-Anschließend schicken sie eine Bestätigung mit ihrem Status des Updates an das Netzwerk (10 - 11).
+Anschlie\ss end schicken sie eine Bestätigung mit ihrem Status des Updates an das Netzwerk (10 - 11).
 
 Auf diese Weise können Firmware-Updates und andere Software-Erweiterungen mit geringem Organisationsaufwand auf allen 
 Geräten durchgeführt werden. 
@@ -96,7 +97,7 @@ Authentifizierung dieses Prozesses.
 Smart Contracts können auch zur Planung und Koordinierung von Wartungen oder zur Steigerung der 
 Betriebseffizienz verwendet werden.
 Leistungsberichte von IoT-Geräten (siehe Kapitel \ref{sec:Risk_Management}) können durch eine Erweiterung um 
-Smart Contracts den Anstoß zum Wartungsprozess automatisieren.
+Smart Contracts den Ansto\ss zum Wartungsprozess automatisieren.
 % Wie im Kapitel \ref{sec:Risk_Management} erklärt, können Leistungsberichte von IoT-Geräten erstellt werden.
 % Durch eine Erweiterung um Smart Contracts kann der Anstoß zum Wartungsprozess automatisiert werden. 
 Bei einem festen Vertragspartner für Wartungen kann sogar der gesamte Prozess automatisiert 
@@ -129,10 +130,10 @@ der Wartung automatisch die Kosten begleichen.
 
 \subsection{Herausforderungen und Risiken}
 
-\subsubsection{Datensicherheit und rechtlicher Schutz}
+\subsubsection{Datensicherheit und rechtliche Risiken}
 Die Eigenschaft von IoT-Geräten kontinuierlich Daten zu sammeln und zu teilen, ist für viele 
-Anwendungsfälle erwünscht und oft der maßgebliche Grund für deren Einsatz. 
-Jedoch stellt ebendiese ein großes Risiko für den Datenschutz dar. Die Kombination mit der 
+Anwendungsfälle erwünscht und oft der ma\ss gebliche Grund für deren Einsatz. 
+Jedoch stellt ebendiese ein gro\ss es Risiko für den Datenschutz dar. Die Kombination mit der 
 Blockchain-Technologie bietet bereits viel Sicherheit in Form von Datenintegrität und Schutz vor 
 unauthentifizierter Datenmanipulation. Allerdings erfordert es zusätzliche regulatorische Bestimmungen, 
 um vorallem Privatpersonen zu schützen.
@@ -166,16 +167,74 @@ In der Praxis empfiehlt es sich eine Zustimmung für jede optionale Dienstleistu
 Dadurch bietet sich dem Nutzer eine individuelle Auswahl der Daten zu treffen, welche er bereit ist zu teilen.
 Darüber hinaus muss der Nutzer stets die vollen Rechte über seine Daten besitzen.
 Das beinhaltet das Recht alle personenbezogenen Daten einzusehen, welche gespeichert wurden und diese gegebenenfalls
-ändern zu können. Außerdem muss ihm die Möglichkeit auf das "Recht auf Vergessenwerden" geboten werden, 
+ändern zu können. Au\ss erdem muss ihm die Möglichkeit auf das "Recht auf Vergessenwerden" geboten werden, 
 wodurch alle gespeicherten Daten zu seiner Person gelöscht werden müssen.
 
 Zusätzlich sind Finanzinstitute und IoT-Gerätehersteller dazu angehalten die Daten vor Hackerangriffen und 
 Datenleaks zu schützen.
-Die Unternehmen können eine hohe Cybersicherheit durch Verschlüsselung der Daten, regelmäßige 
+Die Unternehmen können eine hohe Cybersicherheit durch Verschlüsselung der Daten, regelmä\ss ige 
 Sicherheits-Updates und sichere Authentifizierungsverfahren erreichen.
 Eine Überwachung der Datenströme kann ebenfalls helfen Datenleaks schnell zu erkennen, falls atypische 
 Bewegungen registriert werden.
 \cite[p.~172]{chowdhary2025smart}
+% Smart Contracts !!!
+
+
+\subsubsection{Nachhaltiges Blockchain-Mining}
+Nachhaltigkeit ist ein zunehmend ernstzunehmendes Thema, deren Umsetzung in vielen Bereichen eine 
+Herausforderung darstellt. Um auch hier die Nachhaltigkeit in Betracht zu ziehen, wird hier die 
+Funktionsweise der Blockchain auf ihre Ressourcennutzung untersucht. 
+Die Blockchain-Technologie hat von Natur aus einen hohen Energieverbrauch um die Berechnungen für das 
+Mining durchzuführen. Abhängig vom verwendeten Konsensalgorithmus existieren jedoch Unterschiede bei 
+der Leistungsaufnahme. 
+\cite[p.~2]{Athar2024BC_Sustainability}
+Demnach bietet sich hier ein guter Ansatz, um Konsensalgorithmen hinsichtlich ihres Energieverbrauches
+zu vergleichen.
+
+Das Prinzip \glqq Proof-of-Work\grqq{} (PoW) benötigt von den hier betrachteten Algorithmen die meiste 
+Energie um einen Rechnerknoten auszuwählen (vgl \autoref{fig:PoWPoS_Energy}). Dies kommt durch die vielen 
+Berechnungsiterationen zustande, die benötigt werden um eine passende Nonce zu finden 
+(siehe Kapitel \ref{sec:Erweiterung}).
+\newline
+Das Prinzip "Proof-of-Stake" (PoS) ist hingegen viel energieeffizienter 
+(vgl \autoref{fig:PoWPoS_Energy}), da der Auswahlalgorithmus um einiges simpler ist.
+Aus der \autoref{fig:PoWPoS_Energy} geht hervor, dass bei einem gemischten Konsesus-Modus bereits bei 
+Modus 5 deutliche Energieeinsparungen im Vergleich zum reinen PoW im Modus 6 erkennbar sind. Demzufolge genügt ein Anteil von 20\% PoS im 
+Gesamtgefüge, um die Leistungsaufnahme zu senken (vgl \autoref{fig:PoWPoS_Modes}).
+
+Die Einfachheit des Algorithmus besteht darin, dass dieser seine Auswahl einzig von den Stakes abhängig
+trifft. Die Stakes sind hierbei der Anteil an Kryptowährung, den ein Nutzer im Netzwerk besitzt.
+Es wird der Nutzer gewählt, welcher die meisten Stakes oder mehr als ein Gro\ss teil der Nutzer besitzt.
+Bei diesem Auswahlprinzip wird darauf vertraut, dass ein Nutzer mit vielen Stakes keinen Anreiz hat die
+Daten zu manipulieren.
+\cite[p.280]{Nair2021Energy}
+
+
+
+
+
+\begin{figure}[!h]
+    \begin{center}
+        \includegraphics[height=5cm]{PoW-PoS_Modes.png}
+    \end{center}
+    \quelle{\cite[p.~3]{zhang2020PoWPoS}}
+    \caption{Definition der Konsensus-Modi}
+    \label{fig:PoWPoS_Modes}
+\end{figure}
+
+\begin{figure}[!h]
+    \begin{center}
+        \includegraphics[height=5cm]{PoW-PoS_Energy.png}
+    \end{center}
+    \quelle{\cite[p.~4]{zhang2020PoWPoS}}
+    \caption{Energieverbrauch der (gemischten) Konsensus-Modi}
+    \label{fig:PoWPoS_Energy}
+\end{figure}
+
+%\cite[p.~2ff]{Athar2024BC_Sustainability}
+%\cite[p.~279ff]{Nair2021Energy}
+%\cite[text]{zhang2020PoWPoS}
+
 
 
 
