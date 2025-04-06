@@ -13,7 +13,17 @@
    %top=2.5cm,
    bottom=3cm,
    %marginpar=10cm
-   }
+}
+
+\usepackage{titling}
+\renewcommand\maketitlehooka{\null\mbox{}\vfill}
+\renewcommand\maketitlehookd{\vfill\null}
+
+
+\usepackage[export]{adjustbox}
+
+% Einrückungen
+%\usepackage[skip = half]{parskip}
 
 \usepackage[utf8]{inputenc}	% Dateicodierung
 \usepackage[T1]{fontenc}	% Schriftcodierung
@@ -48,24 +58,55 @@
 	colorlinks = true,
 	linkcolor = blue,
 	citecolor = blue,
-	%hidelinks,  % remove colouring
+	hidelinks,  % remove colouring
 	]{hyperref}
 
 \usepackage{blindtext}
 
 
-\title{Blockchain- und IoT-Integration für die Revolution im Finanzsektor}
-% \title{Blockchain-Integration in Kombination mit Internet of Things im Finanzsektor}
-\author{Helena Stevanovic}
-\date{08. April 2025}
+%\title{Blockchain- und IoT-Integration für die Revolution im Finanzsektor}
+\title{Blockchain-Integration in Kombination mit Internet of Things im Finanzsektor}
+%\author{Helena Stevanovic \\ 104568}
+%\date{08. April 2025}
 
 
 
 \begin{document}
     \pagestyle{plain}
+
+    \begin{figure}
+        \includegraphics[height=2cm, right]{thi_logo.pdf}
+    \end{figure}
+    \begin{center}
+        Technische Hoschule Ingolstadt \\
+        \vspace{5pt} 
+        Fakultät Informatik \\
+        \vspace{5pt} 
+        Fachwissenschaftliches Seminar SS25 \\
+        \vspace{5pt} 
+        Nachhaltiges Rechnen \\
+        \vspace{5pt} 
+        Prof. Dr. Katherine Roegner
+    \end{center}
+    \begingroup
+    \let\newpage\relax% Void the actions of \newpage
     \maketitle
+    \endgroup
+
+    \vspace{3cm}
+    \begin{center}
+        Helena Stevanovic \\
+        104568
+    \end{center}
+
+
+
+
+
     \thispagestyle{empty}
 
+    \newpage
+    \include{chapters/Eigenarbeit}
 
     \newpage
     \tableofcontents
