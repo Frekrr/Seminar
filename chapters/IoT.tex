@@ -177,12 +177,16 @@ Sicherheits-Updates und sichere Authentifizierungsverfahren erreichen.
 Eine Überwachung der Datenströme kann ebenfalls helfen Datenleaks schnell zu erkennen, falls atypische 
 Bewegungen registriert werden.
 \cite[p.~172]{chowdhary2025smart}
+
 % Smart Contracts !!!
+Bei der Nutzung von Smart Contracts 
+\cite[p.~14]{pirafelnerblockchaintechnologie}
+
 
 
 \subsubsection{Nachhaltiges Blockchain-Mining}
 Nachhaltigkeit ist ein zunehmend ernstzunehmendes Thema, deren Umsetzung in vielen Bereichen eine 
-Herausforderung darstellt. Um auch hier die Nachhaltigkeit in Betracht zu ziehen, wird hier die 
+Herausforderung darstellt. Um auch hier die Nachhaltigkeit in Betracht zu ziehen, wird die 
 Funktionsweise der Blockchain auf ihre Ressourcennutzung untersucht. 
 Die Blockchain-Technologie hat von Natur aus einen hohen Energieverbrauch um die Berechnungen für das 
 Mining durchzuführen. Abhängig vom verwendeten Konsensalgorithmus existieren jedoch Unterschiede bei 
@@ -205,8 +209,13 @@ Die Einfachheit des Algorithmus besteht darin, dass dieser seine Auswahl einzig 
 trifft. Die Stakes sind hierbei der Anteil an Kryptowährung, den ein Nutzer im Netzwerk besitzt.
 Es wird der Nutzer gewählt, welcher die meisten Stakes oder mehr als ein Gro\ss teil der Nutzer besitzt.
 Bei diesem Auswahlprinzip wird darauf vertraut, dass ein Nutzer mit vielen Stakes keinen Anreiz hat die
-Daten zu manipulieren.
-\cite[p.280]{Nair2021Energy}
+Daten zu manipulieren.\newline
+Diese Reduktion der Berechnungen beeinflusst jedoch die Zufälligkeit des Algorithmus. Da die Nutzer mit 
+einem geringen Anteil an Stakes fast nie gewählt werden, ist die Verteilung der Blockerstellungen stark 
+auf einen geringen Teil der Nutzer konzentriert. Durch die schlechtere Zufälligkeit wird eine Blockchain 
+mit PoS anfälliger für Cyberangriffe. Um dem entgegenzuwirken bietet es sich an einen Teil der Auswahl
+mit PoW zu treffen.
+\cite[p.280f]{Nair2021Energy}
 \newline
 Das letzte Prinzip \glqq Proof-of-Energy-Efficiency\grqq{} (PoEE) ist grundlegend auf eine hohe 
 Energieeffizienz ausgerichtet. Die Auswahl eines Rechnerknotens wird anhand der nachgewiesenen Steigerung
@@ -216,10 +225,27 @@ gespeichert. Um weitere Anreize für die Reduktion des Energieverbrauchs zu scha
 Minern Prämien für Optimierungsma\ss nahmen angeboten.
 So kann man einen Anteil der Kryptowährung erhalten, wenn beispielsweise die Spitzenlast im 
 Energieverbrauch gesenkt wird oder erneuerbare Energien für das Mining genutzt werden. 
-PoEE ist kompatibel mit anderen Konsens-Algorithmen und man kann diese verschachtelt strukturieren, um 
-die Vorteile aus beiden zu nutzen.
-Da PoW 
-\cite[p.~2ff]{Athar2024BC_Sustainability}
+\cite[p.~2f]{Athar2024BC_Sustainability}
+
+Obgleich PoW vergleichsweise einen sehr hohen Energieverbrauch hat, bietet dieser Algorithmus eine 
+unübertroffene Zufälligkeit und Zuverlässigkeit für die Sicherheit der Daten.
+\cite[p.281]{Nair2021Energy}
+Die Sensibilität der Daten, die auf der Blockchain gespeichert werden, ist also zu berücksichtigen und
+gegen die Vorteile eines energieeffizienteren Systems abzuwiegen. Je nach Anwendungsfall kann eine 
+Kombination aus den Algorithmen die passendste Umsetzung sein, da hierbei die Vorteile vereint werden 
+können.
+
+
+
+
+%PoEE ist kompatibel mit anderen Konsens-Algorithmen und man kann diese verschachtelt strukturieren, um 
+%die Vorteile aus beiden zu nutzen.
+
+
+
+%Da PoS eine bessere Energieeffiziens als PoW aufweist, können die größten Erfolge mit einer Kombination
+%aus PoEE und PoS erzielt werden. In einem solchen System teilt das Netzwerk in mehrere
+%\cite[p.~2ff]{Athar2024BC_Sustainability}
 
 
 
