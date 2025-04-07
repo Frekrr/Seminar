@@ -75,9 +75,9 @@ anderen für die Erstellung auswählt. Stattdessen wird die Auswahl per Zufallsp
 % dezentral --> Verzicht auf Intermediäre
 Für die Realisierung der Zufälligkeit gibt es mehrere Ansätze, hier wird auf das
 Prinzip \glqq Proof-of-Work\grqq{} eingegangen, welches auch auf der Bitcoin-Plattform angewendet wird.
+
 Es wird ein kryptographisches Puzzle an alle Miner gestellt, das ausschlie\ss lich
 durch den erbrachten Rechenaufwand lösbar ist. Daher der Name "Proof-of-Work". 
-
 % Ablauf
 Zuerst wird der Block Header um die für das Puzzle nötigen Elemente 
 erweitert: Eine Protokollversion für die Erstellung eines neuen Blocks, einen Zeitstempel mit
@@ -121,10 +121,10 @@ und anschlie\ss end auf deren Potential im Finanzsektor eingegangen.
 \subsubsection{Transaktionen}
 Der Kryptomarkt ist der wohl bekannteste Bereich, welcher auf der Blockchain-Technologie basiert.
 %in der die Blockchain ein grundlegender Bestandteil ist. 
-Die stärksten Kryptowährungen sind Bitcoin und Ethereum. 
+Die stärksten Kryptowährungen sind hier Bitcoin und Ethereum. 
 Die Blockchain gewährleistet die Sicherheit und Nachvollziehbarkeit von Transaktionen. 
 \cite[p.~168]{chowdhary2025smart}
-Die Sicherheit wird durch die Nutzung eines Konsensalgorithmus erreicht, welcher nur validierte 
+Diese wird dabei durch die Nutzung eines Konsensalgorithmus erreicht, welcher nur validierte 
 Änderungen erlaubt. Die Nachvollziehbarkeit wird  durch den Aufbau der Blockchain erreicht, da stets 
 alle vorherigen Transaktionen einsehbar sind, indem die Header-Referenzen rekursiv zurückverfolgt
 werden können (vgl \autoref{fig:BC_Aufbau}).
@@ -178,7 +178,8 @@ und Datenstrukturen. Informationen der aufrufenden Transaktion sind ebenfalls zu
 mittels der mitgelieferten Adresse die Identität des Aufrufers
 zu authentifizieren. Aus der gesamten Blockchain kann ein Smart Contract neben
 allgemein zugänglichen Informationen auch auf bestimmte Daten zugreifen, wie z.B. 
-Tokens die dem Aufrufer zugeschrieben sind (vgl Kapitel \ref{sec:Tokenization}).
+Tokens die dem Aufrufer zugeschrieben sind.
+% (vgl Kapitel \ref{sec:Tokenization}).
 Sind zur Ausführung des Contracts externe Informationen relevant, ist die Einbindung von Oracles
 eine gängige Praxis. Mithilfe dieser kann auf Datenbanken oder andere Datenspeicher zugegriffen werden.
 Ein Smart Contract kann auch weitere Smart Contracts in der Blockchain aufrufen und so 
